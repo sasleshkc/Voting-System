@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"></script>
+    <script src="client.js" defer></script>
+    <title>Voting App</title>
+</head>
+<body>
+    <header>
+        <div>
+            <img class="logo" src="logo.png" alt="st_logo">
+        </div>
+        <div class="title">
+            <strong>
+                <p id="head">Science Expo<p id="sub">~By Science and IT club</p></p>
+            </strong>
+        </div>
+        <div>
+            <img class="logo" src="sci.png" alt="sciit_logo">
+        </div>
+    </header>
+
+    <hr>
+    <main>
+        <div class="a_vote">
+            <p>Candidate 1<br>Stall no: 1</p>
+            <button onclick="vote(0)">Vote</button>
+        </div>
+        <div class="a_vote">
+            <p>Candidate 2<br>Stall no: 2</p>
+            <button onclick="vote(1)">Vote</button>
+        </div>
+    </main>
+    
+    <div id="overlay"></div>
+    <div id="modal">
+        <h1>Thank you for voting</h1>
+        <button onclick="toggleModal()">Close</button>
+    </div>
+</body>
+</html>
